@@ -1,0 +1,19 @@
+1 cmd: composer require maatwebsite/excel
+2 them trong app.config
+'providers' => [
+    /*
+     * Package Service Providers...
+     */
+    Maatwebsite\Excel\ExcelServiceProvider::class,
+]
+
+'aliases' => [
+    ...
+    'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+]
+
+3 cmd: php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider"
+
+ 4 php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider"
+
+5 php artisan make:export ExportRecipes

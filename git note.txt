@@ -1,0 +1,6 @@
+$ git remote rm origin
+git remote add origin https://github.com..
+git remote -v //xem remote
+git push --set-upstream origin CODE
+
+xoa lock :rm -f ./.git/index.lock

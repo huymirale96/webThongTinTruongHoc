@@ -1,0 +1,45 @@
+loi k chay route: php artisan serve
+Carbon::now()->toDateTimeString();
+max length... config > database > 'charset' => 'utf8',
+https://chungnguyen.xyz/posts/code-laravel-lam-sao-cho-chuan
+storeAs('public/name..')
+run all migration: php artisan migrate
+
+
+
+
+hoc de biet 
+hoc de lam
+hoc de quan ly
+
+he tu tuong tuyen nhan su de lam cho minj]
+
+ys tyong
+van  hanh
+bao cao
+sua chua
+chiu tranh nhiem
+
+
+ceo tim san choi(mat hang choi)
+ra luat choi
+tim nguoi choi
+
+
+contact: emial , noi dung, ho ten
+
+video, pho to, thong bao, tuyen sinh,  link to web is the same type;
+
+
+
+thu vien: noi dung, link, nguoi dang, id loai, dowloads, slug + id  >>fix cung  
+
+news: tieu de, noi dung, nguoi dang, loai tin, views, ngày, slug  >>fix mem 
+
+gioi thieu: ten, noi dung, slug   vd: gioi-thieu/huan-huy-chuong/  >>fix cung
+
+
+
+
+link: .../loai-tin/tieu-de  vd: tuyen-sinh/ha-noi-co-nhieu-noi-tuyen-sinh : tim tuyen sinh truoc > tin
+   				tuyen-sinh/
