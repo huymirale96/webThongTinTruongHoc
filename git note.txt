@@ -11,3 +11,6 @@ git commit -m "cmt"
 git add *
 git remote add origin url.git
 git push -u origin master
+
+
+git checkout new-branch-name//chuyên nhánh
