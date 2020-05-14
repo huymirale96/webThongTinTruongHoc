@@ -4,3 +4,10 @@ git remote -v //xem remote
 git push --set-upstream origin CODE
 
 xoa lock :rm -f ./.git/index.lock
+
+push to orther:
+git status
+git commit -m "cmt"
+git add *
+git remote add origin url.git
+git push -u origin master
