@@ -1,0 +1,2 @@
+$ git branch sualoigap              #t?o nhánh
+$ git checkout sualoigap            #chuy?n nhánh
