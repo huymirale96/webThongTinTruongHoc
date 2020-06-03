@@ -1,2 +1,3 @@
 $ git branch sualoigap              #t?o nhánh
 $ git checkout sualoigap            #chuy?n nhánh
+git push --set-upstream origin branch_huy
