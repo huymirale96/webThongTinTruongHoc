@@ -34,6 +34,7 @@ class AuthController extends Controller
             ];
             if(Auth::guard('account')->attempt($arr,$remember)) //Auth::guard('account')->user()->email;
             {
+             //   var_dump("echo: " + Auth::check() );
                return redirect()->route('admin.index');
             }
             else{

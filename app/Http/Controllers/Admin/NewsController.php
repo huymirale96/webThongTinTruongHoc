@@ -148,6 +148,17 @@ class NewsController extends Controller
         }
     }
 
+    public function searchNews(Request $request)
+    {
+      //  dd($request->keyWord);
+        //$news =  News::with('account','newstype')->orderBy('created_at','desc')->withTrashed()->paginate(10);
+        // dd($news);
+        $news = DB::table('news')->join('accounts','news.account_id',"accounts.id")->join("newsTypes","newsTypes.id","news.newstype_id")->where("news.description","like","%".$request->keyWord."%")->paginate(10);
+        //dd($news);   
+        return view('admin.news.listSearch',['news'=>$news]);
+           
+    }
+
     
 
 

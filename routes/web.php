@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Exports\TestExport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\DB;
+use App\Http\Middleware\CheckLogin;
 use App\News;
 use App\NewsType;
 
@@ -27,6 +28,11 @@ use App\NewsType;
 
 });*/
 
+
+Route::get('a11', function () {
+   return 'User ss   '. storage_path();
+ 
+});
 
 Route::get('/test', function () {
     //$data = App\News::orderBy('created_at', 'desc')->take(6)->get(); //sortByDesc  where('slug_newtype','tin-the-thao')
@@ -129,7 +135,7 @@ $data = News::where('id',14)->with(['newstype'])->select('id')->toSql();//->toAr
  Route::post('register','AuthController@postRegister')->name('admin.postregister'); 
  Route::get('logout','AuthController@logout')->name('admin.logout'); 
 
-
+ Route::group(['middleware' => 'CheckLogin'], function () {
  //NEWSTYPE
  Route::get('/','HomeController@index')->name('admin.index'); 
  Route::get('trang-chu-admin','HomeController@index')->name('admin.index');  
@@ -142,6 +148,7 @@ $data = News::where('id',14)->with(['newstype'])->select('id')->toSql();//->toAr
  Route::get('them-tin-tuc','NewsController@createNews')->name('admin.news.get_add_news'); 
  Route::post('createnews','NewsController@storeNews')->name('admin.news.post_add_news'); 
  Route::get('listnews','NewsController@list')->name('admin.news.list'); 
+ Route::get('tim-tin','NewsController@searchNews')->name('admin.searchNews'); 
  Route::get('updatenews','NewsController@get_updateNews')->name('admin.news.get_updatenews');  
  Route::post('updatenews','NewsController@post_updateNews')->name('admin.news.post_updatenews');
  Route::get('deletenews','NewsController@deleteNews')->name('admin.news.deletenews');
@@ -169,9 +176,11 @@ Route::get('confirmfeedback','FeedBackController@confirmFeedback')->name('admin.
  Route::get('them-gioi-thieu','IntroduceController@createIntroduce')->name('admin.introduces.get_add_introduces'); 
  Route::post('createintroduce','IntroduceController@storeIntroduce')->name('admin.introduces.post_add_introduces'); 
  Route::get('danh-sach-gioi-thieu','IntroduceController@list')->name('admin.introduces.list'); 
+ Route::get('updateintroduce','IntroduceController@getIntroduce')->name('admin.introduces.getupdate'); 
+ Route::post('updateintroduce','IntroduceController@updateIntroduce')->name('admin.introduces.updateintroduce'); 
 // Route::get('deletedocument','DocumentsController@deleteDocuments')->name('admin.documents.delete'); 
 // Route::get('restoredocument','DocumentsController@restoreDocuments')->name('admin.documents.restore');
-
+});
 
 });
 

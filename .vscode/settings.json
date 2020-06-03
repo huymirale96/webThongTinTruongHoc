@@ -1,0 +1,5 @@
+{
+    "git.ignoreLimitWarning": true,
+    "editor.formatOnSave": true,
+    "blade.format.enable": true
+}
